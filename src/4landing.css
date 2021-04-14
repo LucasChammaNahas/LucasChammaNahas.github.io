@@ -6,7 +6,7 @@
   padding-top: 15vh;
   font-family: var(--logo);  
   font-style: italic;
-  font-size: 170px;
+  font-size: 70px;
   color:white;
 }
 
@@ -26,6 +26,30 @@
   background-position: 50% 90%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.card{
+  width: 800px;
+  display: flex;
+  // border: 1px solid black;
+  margin: 50px auto;
+  align-items: center;
+}
+
+.foto-perfil{
+  height: 250px;
+  width:auto;
+  border-radius: 50%;
+}
+
+.card p {
+  color: white;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.p2{
+  color: black;
+  font-size: 35px;
 }
 
 
