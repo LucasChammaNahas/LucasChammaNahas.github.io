@@ -8,12 +8,7 @@
     <title>LUCAS</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/1ini.css">
-    <link rel="stylesheet" href="src/2menu.css">
-    <link rel="stylesheet" href="src/3header.css">
-    <link rel="stylesheet" href="src/4landing.css">
-    <link rel="stylesheet" href="src/5subpages.css">
-    <link rel="stylesheet" href="src/6contato.css">
+    <link rel="stylesheet" href="src/styles.css">
   </head>
 
 
@@ -22,158 +17,59 @@
 
   <body>
 
-    <!-- MENU -->
-    <div class="blue-bar"></div>
-    <header>
-      <logo><a href="./">LUCAS CN</a></logo>
-    </header>
+    <section id="section1">
+      <h1>Lucas Chamma Nahas</h1>
+      <a href="./images/perfil.png">
+        <img class="foto-perfil" src="./images/perfil.png" alt="foto de perfil com fundo laranja">
+      </a>
+      <hr>
+    </section>
 
+    <section id="section2">
+      <h2>Indice:</h2>
+      <ol>
+        <a href="#section3"><li>Quem é o Lucas</li></a>
+        <a href="#section4"><li>Habilidades</li></a>
+        <a href="#section5"><li>Contato</li></a>
+      </ol>
+      <hr>
+    </section>
 
-    <main class="landing-page">
+    <section id="section3">
+      <h2>Quem é o Lucas</h2>
+      <p>
+        Lucas é um engenheiro naval formado na Universidade de São Paulo, amante de computadores e entusiasta de programação.
+      </p>
+      <p>
+        Atualmente, ele está se dedicando ao estudo de desenvolvimento web em uma escola muito renomada no meio da tecnologia.
+      </p>
+      <hr>
+    </section>
 
-      <section class="sec1">
-        <h1>Lucas Chamma Nahas</h1>
-        <!-- <h2>Site Pessoal</h2> -->
-        <div class="card">
-          <a href="./images/perfil.png">
-            <img class="foto-perfil" src="./images/perfil.png" alt="foto de perfil com fundo laranja">
-          </a>
-          <p class="descricao">
-            Engenheiro naval que está estudando programação para se tornar um desenvolvedor web
-          </p>
-        </div>
-        <a href="https://www.w3schools.com/js/" target="_blank" class="p2"><strong>Habilidades:</strong></a>
-        <ul class="lista">
-          <li><strong>HTML</strong></li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>SQL</li>
-        </ul>
-      </section>
+    <section id="section4">
+      <h2>Habilidades</h2>
+      <ul class="lista">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>SQL</li>
+      </ul>      
+      <hr>
+    </section>
 
-      <!-- <section class="sec2">
-        <div class="L">
-          <h4>O que fazemos?</h4>
-          <p class="">
-            A HydroCavit é uma startup que foi fundada com o 
-            propósito de trazer a hidrocavitação como uma 
-            solução ecológica ao mundo industrial.
-          </p>
-          <p class="">
-            O uso desta inovadora tecnologia reduz a quantidade 
-            de energia usada em cada uma das áreas que pode ser 
-            aplicada, tornando a produção de quem a usa mais lucrativa, 
-            ao mesmo tempo que ajuda o planeta.
-          </p>
-        </div>
-        <div class="R">
-          <h4>Aplicações</h4>
-          <div class="grid-row">
-            <a href="#" class="grid-el cana"></a>
-            <a href="#" class="grid-el milho"></a>
-            <a href="#" class="grid-el biogas"></a> 
-          </div>
-          <div class="grid-row">
-            <a href="#" class="grid-el oleos"></a>
-            <a href="#" class="grid-el agua"></a>
-            <a href="#" class="grid-el efluentes"></a> 
-          </div>
-          <div class="grid-row">
-            <a href="#" class="grid-el cerveja"></a>
-            <a href="#" class="grid-el sucos"></a>
-            <a href="#" class="grid-el laticinios"></a> 
-          </div>
-        </div>
-      </section>
-      
-      <section class="sec3">
-        <div class="L">
-          <img src="images/main-sec3.svg" alt="">
-        </div>
-        <div class="R">
-          <h4>Aplicações</h4>
-          <p class="">
-            Hidrocavitação é um processo totalmente físico, 
-            que serve para tratar diversos tipos diferentes 
-            de substratos líquidos, oferecendo soluções para 
-            a indústria de bebidas, setor energético e meio-ambiente
-          </p>
-        </div>
-      </section>
-
-      <section class="sec4">
-      <div class="L">
-          <img src="images/main-sec4A.svg" alt="">
-          <p class="">
-          A hidrocavitação ocorre dentro 
-          de nossos Reatores de Hidrocavitação 
-          Controlada. Essa exclusiva 
-          tecnologia Plug and Play é facilmente 
-          instalada e não possui nenhuma parte móvel.
-          </p>
-        </div>
-        <div class="M">
-          <img src="images/main-sec4B.svg" alt="">
-          <p class="">
-          A simples passagem do substrato 
-          pelos reatores basta para realizar 
-          o processo, o qual recebe 
-          instantaneamente os benefícios 
-          que a hidrocavitação traz.
-          </p>
-        </div>
-        <div class="R">
-          <img src="images/main-sec4C.svg" alt="">
-          <p class="">
-          O resultado é um maior rendimento para a empresa.
-          </p>
-        </div>    
-      </section><section class="contato">
-          <h4>Gostou do que viu?</h4>
-          <h4>Entre em contato com a gente!</h4>
-          
-          <div class="card">
-            <div class="card-L">
-
-              <div class="">
-                <img src="images/contato-phone.svg" alt="" class="">
-                <p>(11) 2321-5055</p>
-              </div>
-              
-              <div class="">
-                <img src="images/contato-email.svg" alt="" class="">
-                <p>contato@hydrocavit.com</p>
-              </div>
-              
-              <div class="">
-                <img src="images/contato-local.svg" alt="" class="">
-                <div class="">
-                  <p>Alameda Araguaia</p> 
-                  <p>2190, cj 1109</p>
-                  <p>Alphaville - SP</p>
-                  <p>CEP 06455-000</p>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="card-R">
-              <form action="" class="form">
-                <input type="text" placeholder="Nome">
-                <input type="text" placeholder="Email">
-                <textarea name="msg" id="msgId" placeholder="Sua mensagem"></textarea>
-                <button>ENVIAR</button>
-              </form>
-            </div>
-          </div>
-
-        </section> -->
+    <section id="section5">
+      <h2>Contato</h2>
+      <a href="https://github.com/LucasChammaNahas" target="_blank"><img src="./images/github.png" alt="github" class="icons"></a>
+      <a href="https://www.linkedin.com/in/lucas-chamma-nahas/" target="_blank"><img src="./images/linkedin.png" alt="linkedin" class="icons"></a>
+      <a href="mailto:lucasnahas@gmail.com" target="_blank"><img src="./images/mail.png" alt="mail" class="icons"></a>
+      <hr>
+    </section>
 
         
       </main>
-      <div class="footer">HydroCavit</div>
+      <div class="footer">Footer</div>
 
 
       <script src="src/script.js"></script>
