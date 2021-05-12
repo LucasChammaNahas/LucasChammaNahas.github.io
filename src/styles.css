@@ -7,6 +7,10 @@
   /* border: cadetblue solid 2px; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: #26272B;
   background-image: url("../images/background.jpg");
@@ -17,7 +21,10 @@ body{
 }
 /* INITIAL ***********************************************/
 
-
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 
 
 
@@ -74,13 +81,30 @@ header{
 
 
 /* PAGE 1 ************************************************/
-.page1{
+section{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.page1 .div-central{
+/* PAGE 1 ************************************************/
+
+
+
+
+
+
+
+
+
+/* PAGE 1 ************************************************/
+#page1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#page1 .div-central{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,17 +113,17 @@ header{
   /* font-size: 50px; */
   font-size: 35px;
 }
-.page1 .div-central img{
+#page1 .div-central img{
   height: 300px;
   width: auto;
   padding: 180px 0 0 11%;
   /* border: solid 3px yellow; */
 }
-.page1 .div-central .p1{
+#page1 .div-central .p1{
   color: #8D85F1;
   padding: 30px 0;
 }
-.page1 .div-central .p2{
+#page1 .div-central .p2{
   color: #D3AE76;
 }
 /* PAGE 1 ************************************************/
@@ -113,14 +137,14 @@ header{
 
 
 /* PAGE 2 ************************************************/
-.page2{
+#page2{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   border: solid 3px yellow;
 }
-.page2 .div-central{
+#page2 .div-central{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,12 +152,12 @@ header{
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
 }
-.page2 .div-central img{
+#page2 .div-central img{
   height: 300px;
   width: auto;
   padding: 11% 0 0 0;
 }
-.page2 .div-central p{
+#page2 .div-central p{
   color: #ccc;
   text-align: center;
   padding-top: 30px;
