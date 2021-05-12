@@ -17,12 +17,44 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  /* position: relative; */
 }
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
 }
 /* INITIAL ***********************************************/
+
+
+
+
+
+
+
+
+
+
+/* MODAL *************************************************/
+  #modal-bg {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #modal {
+    width: 90vw;
+    height: 90vh;
+    top: 5vh;
+    left: 5vw;
+    background-color: rgb(40, 40, 40);
+    border-radius: 25px;
+
+  }
+/* MODAL *************************************************/
 
 
 

@@ -1,0 +1,95 @@
+
+:root {
+  --gridColor: rgb(200, 200, 200);
+  --gridWidth: 10px;
+}
+
+/* body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  min-height: 100vh;
+} */
+
+#modal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Formatacao do titulo */
+#modal .playerX{
+  color: rgb(50, 200, 50);
+}
+#modal .playerO{
+  color: rgb(178, 95, 255);
+}
+#modal  p {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 50px;
+   color: white;
+   margin-bottom: 80px;
+ }
+#modal span {
+  font-size: 80px;
+  font-weight: 900;
+}
+
+
+/* Formatacao da matrix */
+#modal #matrix {
+  display: flex;
+}
+#modal .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  min-height: 150px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 500%;
+  font-weight: 900;
+}
+#modal .cell:hover{
+  background-color: #333;
+}
+
+
+/* Linhas do # */
+#modal #cell11, #modal #cell21{
+  border-right:  solid var(--gridColor) var(--gridWidth);
+  border-bottom: solid var(--gridColor) var(--gridWidth);  
+}
+#modal #cell31{
+  border-right:  solid var(--gridColor) var(--gridWidth);
+}
+#modal #cell12, #modal #cell22{
+  border-bottom: solid var(--gridColor) var(--gridWidth);  
+}
+#modal #cell13, #modal #cell23{
+  border-left:   solid var(--gridColor) var(--gridWidth);
+  border-bottom: solid var(--gridColor) var(--gridWidth);  
+}
+#modal #cell33{
+  border-left:   solid var(--gridColor) var(--gridWidth);
+}
+
+
+/* Botoes */
+#modal button {
+  border: none;
+  border-radius: 6px;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: crimson;
+  color: white;
+  margin: 70px 40px;
+}
+#modal button:active {
+  background-color: rgb(253, 77, 112);
+}
