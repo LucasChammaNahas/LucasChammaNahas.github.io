@@ -1,5 +1,6 @@
 
 let ticTacToeHtml = `
+    <button id="modal-close-btn">X</button>     
     <p>Turn: <span id="turn" class="playerX">X</span></p>
 
     <div id="matrix">
@@ -25,7 +26,3 @@ let ticTacToeHtml = `
       <button id="undo-btn">UNDO LAST PLAY</button>
     </div>
 `;
-
-
-document.getElementById('modal').innerHTML = ticTacToeHtml;
-ticTacToeInit();

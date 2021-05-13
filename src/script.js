@@ -1,6 +1,6 @@
 
 // INITIALIZES THE CODE
-// document.getElementById('link1').click();
+document.getElementById('link1').click();
 let currentPage = 1;
 let isScrollEnabled = true;
 
@@ -8,7 +8,7 @@ let isScrollEnabled = true;
 // SETS EVENT LISTENERS TO THE HMTL
 document.getElementsByTagName('html')[0].addEventListener('wheel', mousePageScroll);
 document.getElementsByTagName('html')[0].addEventListener('keydown', keypadPageScroll);
-
+document.getElementById('projetos').addEventListener('click', ticTacToeInit);
 
 // SCROLL FUNCTIONS
 function mousePageScroll(e){
@@ -53,6 +53,10 @@ function supressEventTrigger(){
   setTimeout(() => { isScrollEnabled = true;}, 300);
 }
   
+function closeModal(){
+  document.getElementById('modal-bg').style.visibility = 'hidden';
+  isScrollEnabled = true;
+}
   
 
 

@@ -3,9 +3,14 @@
 let lastTurn;
 
 function ticTacToeInit(){
+  // Injeta HTML no modal
+  document.getElementById('modal').innerHTML = ticTacToeHtml;
+
   // Inicia as Variaveis Globais
   lastTurn = false;
-
+  isScrollEnabled = false;
+  
+  
   // Adiciona Event Listeners
   let cells = document.getElementById('matrix');
   for (let i = 0; i < cells.children.length; i++){
@@ -15,6 +20,10 @@ function ticTacToeInit(){
   }
   document.getElementById('reset-btn').addEventListener('click', resetGame);
   document.getElementById('undo-btn') .addEventListener('click', undoTurn);
+  document.getElementById('modal-close-btn') .addEventListener('click', closeModal);
+  
+  // Deixa o modal visivel
+  document.getElementById('modal-bg').style.visibility = 'visible';
 }
 
 

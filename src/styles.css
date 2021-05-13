@@ -44,15 +44,30 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
+  }
+  #modal #modal-close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 10%;
+    background-color: rgb(70, 70, 70);
+    border-width: 0;
+    font-size: 40px;
+    margin: 0;
+  }
+  #modal #modal-close-btn:active{
+    background-color: rgb(90, 90, 90);
   }
   #modal {
+    position: relative;
     width: 90vw;
+    max-width: 800px;
     height: 90vh;
-    top: 5vh;
-    left: 5vw;
     background-color: rgb(40, 40, 40);
     border-radius: 25px;
-
   }
 /* MODAL *************************************************/
 
@@ -71,7 +86,7 @@ header{
   justify-content: space-between;
   height: 150px;
   width: 100%;
-  border: solid 3px gray;
+  /* border: solid 3px gray; */
 }
 .logo{
   display: flex;
