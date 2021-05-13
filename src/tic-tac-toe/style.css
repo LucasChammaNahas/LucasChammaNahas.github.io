@@ -1,18 +1,18 @@
 
+/*
+  TODO O CSS SOMENTE SERÁ APLICADO
+  AO ELEMENTO #injection-div
+*/
+
+
+
 :root {
   --gridColor: rgb(200, 200, 200);
   --gridWidth: 10px;
 }
 
-/* body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #222;
-  min-height: 100vh;
-} */
-
-#modal{
+/* Formatacao do div de injecao */
+#injection-div{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,29 +21,29 @@
 
 
 /* Formatacao do titulo */
-#modal .playerX{
+#injection-div .playerX{
   color: rgb(50, 200, 50);
 }
-#modal .playerO{
+#injection-div .playerO{
   color: rgb(178, 95, 255);
 }
-#modal  p {
+#injection-div  p {
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    font-size: 50px;
    color: white;
    margin-bottom: 80px;
  }
-#modal span {
+#injection-div span {
   font-size: 80px;
   font-weight: 900;
 }
 
 
 /* Formatacao da matrix */
-#modal #matrix {
+#injection-div #matrix {
   display: flex;
 }
-#modal .cell {
+#injection-div .cell {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,33 +54,33 @@
   font-size: 500%;
   font-weight: 900;
 }
-#modal .cell:hover{
+#injection-div .cell:hover{
   background-color: #333;
 }
 
 
 /* Linhas do # */
-#modal #cell11, #modal #cell21{
+#injection-div #cell11, #injection-div #cell21{
   border-right:  solid var(--gridColor) var(--gridWidth);
   border-bottom: solid var(--gridColor) var(--gridWidth);  
 }
-#modal #cell31{
+#injection-div #cell31{
   border-right:  solid var(--gridColor) var(--gridWidth);
 }
-#modal #cell12, #modal #cell22{
+#injection-div #cell12, #injection-div #cell22{
   border-bottom: solid var(--gridColor) var(--gridWidth);  
 }
-#modal #cell13, #modal #cell23{
+#injection-div #cell13, #injection-div #cell23{
   border-left:   solid var(--gridColor) var(--gridWidth);
   border-bottom: solid var(--gridColor) var(--gridWidth);  
 }
-#modal #cell33{
+#injection-div #cell33{
   border-left:   solid var(--gridColor) var(--gridWidth);
 }
 
 
 /* Botoes */
-#modal button {
+#injection-div button {
   border: none;
   border-radius: 6px;
   padding: 15px 20px;
@@ -90,6 +90,46 @@
   color: white;
   margin: 70px 40px;
 }
-#modal button:active {
+#injection-div button:active {
   background-color: rgb(253, 77, 112);
+}
+
+
+/* Logica da linha de vitoria */
+#winner-line{
+  position: absolute;
+  border-top: solid crimson 7px;
+  /* width: 0px; */
+}
+.winL1{
+  width: 470px;
+  transform: translateY(-170px);
+}
+.winL2{
+  width: 470px;
+  transform: translateY(-10px);
+}
+.winL3{
+  width: 470px;
+  transform: translateY(150px);
+}
+.winC1{
+  width: 470px;
+  transform: rotate(90deg) translateY(160px);
+}
+.winC2{
+  width: 470px;
+  transform: rotate(90deg) translateY(0px);
+}
+.winC3{
+  width: 470px;
+  transform: rotate(90deg) translateY(-160px);
+}
+.winD1{
+  width: 650px;
+  transform: rotate(45deg) translateY(-10px);;
+}
+.winD2{
+  width: 650px;
+  transform: rotate(-45deg) translateY(-5px);;
 }

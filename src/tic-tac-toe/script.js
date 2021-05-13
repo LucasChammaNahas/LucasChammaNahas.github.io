@@ -4,7 +4,7 @@ let lastTurn;
 
 function ticTacToeInit(){
   // Injeta HTML no modal
-  document.getElementById('modal').innerHTML = ticTacToeHtml;
+  document.getElementById('injection-div').innerHTML = ticTacToeHtml;
 
   // Inicia as Variaveis Globais
   lastTurn = false;
@@ -58,11 +58,14 @@ function resetGame(){
   for (let i = 0; i < cells.children.length; i++){
     for (let j = 0; j < cells.children[i].children.length; j++){
       cells.children[i].children[j].innerHTML = '';
+      cells.children[i].children[j].classList.remove('playerO');
+      cells.children[i].children[j].classList.remove('playerX');
     }
   }
   document.getElementById('turn').innerHTML = 'X';
   document.getElementById('turn').classList.remove('playerO');
   document.getElementById('turn').classList.add('playerX');
+  document.getElementById('winner-line').className = '';
 }
 
 function undoTurn(){
@@ -84,30 +87,23 @@ function checkIfWins(){
   let a31 = document.getElementById('cell31').innerHTML;
   let a32 = document.getElementById('cell32').innerHTML;
   let a33 = document.getElementById('cell33').innerHTML;  
+  let winnerLine = document.getElementById('winner-line').classList;
 
-  if (a11 == 'X' && a12 == 'X' && a13 == 'X' || 
-      a21 == 'X' && a22 == 'X' && a23 == 'X' || 
-      a31 == 'X' && a32 == 'X' && a33 == 'X' ||
-      a11 == 'X' && a21 == 'X' && a31 == 'X' || 
-      a12 == 'X' && a22 == 'X' && a32 == 'X' || 
-      a13 == 'X' && a23 == 'X' && a33 == 'X' ||
-      a11 == 'X' && a22 == 'X' && a33 == 'X' || 
-      a13 == 'X' && a22 == 'X' && a31 == 'X'
-  ){
-    alert('X ganhou!');
-    return;
-  }
+  if      (a11 == 'X' && a12 == 'X' && a13 == 'X'){ winnerLine.add('winL1') }
+  else if (a21 == 'X' && a22 == 'X' && a23 == 'X'){ winnerLine.add('winL2') }
+  else if (a31 == 'X' && a32 == 'X' && a33 == 'X'){ winnerLine.add('winL3') }
+  else if (a11 == 'X' && a21 == 'X' && a31 == 'X'){ winnerLine.add('winC1') }
+  else if (a12 == 'X' && a22 == 'X' && a32 == 'X'){ winnerLine.add('winC2') }
+  else if (a13 == 'X' && a23 == 'X' && a33 == 'X'){ winnerLine.add('winC3') }
+  else if (a11 == 'X' && a22 == 'X' && a33 == 'X'){ winnerLine.add('winD1') }
+  else if (a13 == 'X' && a22 == 'X' && a31 == 'X'){ winnerLine.add('winD2') }
 
-  if (a11 == 'O' && a12 == 'O' && a13 == 'O' || 
-      a21 == 'O' && a22 == 'O' && a23 == 'O' || 
-      a31 == 'O' && a32 == 'O' && a33 == 'O' ||
-      a11 == 'O' && a21 == 'O' && a31 == 'O' || 
-      a12 == 'O' && a22 == 'O' && a32 == 'O' || 
-      a13 == 'O' && a23 == 'O' && a33 == 'O' ||
-      a11 == 'O' && a22 == 'O' && a33 == 'O' || 
-      a13 == 'O' && a22 == 'O' && a31 == 'O'
-  ){
-    alert('O ganhou!');
-    return;
-  }
+  else if (a11 == 'O' && a12 == 'O' && a13 == 'O'){ winnerLine.add('winL1') }
+  else if (a21 == 'O' && a22 == 'O' && a23 == 'O'){ winnerLine.add('winL2') }
+  else if (a31 == 'O' && a32 == 'O' && a33 == 'O'){ winnerLine.add('winL3') }
+  else if (a11 == 'O' && a21 == 'O' && a31 == 'O'){ winnerLine.add('winC1') }
+  else if (a12 == 'O' && a22 == 'O' && a32 == 'O'){ winnerLine.add('winC2') }
+  else if (a13 == 'O' && a23 == 'O' && a33 == 'O'){ winnerLine.add('winC3') }
+  else if (a11 == 'O' && a22 == 'O' && a33 == 'O'){ winnerLine.add('winD1') }
+  else if (a13 == 'O' && a22 == 'O' && a31 == 'O'){ winnerLine.add('winD2') }
 }

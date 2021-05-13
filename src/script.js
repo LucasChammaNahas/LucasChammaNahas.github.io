@@ -6,9 +6,10 @@ let isScrollEnabled = true;
 
 
 // SETS EVENT LISTENERS TO THE HMTL
-document.getElementsByTagName('html')[0].addEventListener('wheel', mousePageScroll);
-document.getElementsByTagName('html')[0].addEventListener('keydown', keypadPageScroll);
-document.getElementById('projetos').addEventListener('click', ticTacToeInit);
+document.getElementsByTagName('html')[0]   .addEventListener('wheel',   mousePageScroll);
+document.getElementsByTagName('html')[0]   .addEventListener('keydown', keypadPageScroll);
+document.getElementById('proj-tic-tac-toe').addEventListener('click',   ticTacToeInit);
+
 
 // SCROLL FUNCTIONS
 function mousePageScroll(e){
@@ -59,5 +60,5 @@ function closeModal(){
 }
   
 
-
+// ticTacToeInit(); //DEL
 

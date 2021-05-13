@@ -1,0 +1,6 @@
+
+
+Colocar o botao de fechar modal em html no /index.html
+posicionar o botao de fechar modal no /src/style.css
+#modal deve ser position relative
+#closeBtn deve ser position absolute
