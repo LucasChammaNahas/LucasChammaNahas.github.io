@@ -17,7 +17,11 @@ document.getElementById('proj-tic-tac-toe').addEventListener('click',   ticTacTo
 
 // PREVENTS PAGE FROM BUGGIN ON RESIZE OR ZOOM
 function resizeCancel(){
+  document.getElementsByTagName('html')[0].style.scrollBehavior = 'auto';
   document.getElementById(`link${ currentPage }`).click();
+  setTimeout(() => { 
+    document.getElementsByTagName('html')[0].style.scrollBehavior = 'smooth';
+  }, 200);
 }
 
 

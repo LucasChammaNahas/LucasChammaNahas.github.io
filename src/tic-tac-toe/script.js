@@ -3,6 +3,7 @@
 let lastTurn;
 
 function ticTacToeInit(){
+  
   // Injeta HTML no modal
   document.getElementById('injection-div').innerHTML = ticTacToeHtml;
 
