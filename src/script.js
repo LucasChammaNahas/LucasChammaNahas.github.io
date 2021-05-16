@@ -1,50 +1,63 @@
 
 // INITIALIZES THE CODE
-document.getElementById('link1').click();
 let currentPage = 1;
 let isScrollEnabled = true;
+document.getElementById('link1').click();
 
 
 // SETS EVENT LISTENERS TO THE HMTL
+window.addEventListener('resize', resizeCancel);
+document.getElementsByTagName('html')[0]   .addEventListener('keydown', zoomCancel1);
+document.getElementsByTagName('html')[0]   .addEventListener('keyup',   zoomCancel2);
 document.getElementsByTagName('html')[0]   .addEventListener('wheel',   mousePageScroll);
 document.getElementsByTagName('html')[0]   .addEventListener('keydown', keypadPageScroll);
 document.getElementById('proj-tic-tac-toe').addEventListener('click',   ticTacToeInit);
 
 
+
+// PREVENTS PAGE FROM BUGGIN ON RESIZE OR ZOOM
+function resizeCancel(){
+  document.getElementById(`link${ currentPage }`).click();
+}
+
+
+// ZOOM CANCEL FUNCTIONS
+function zoomCancel1(e){
+  let key = e.which || e.keyCode;
+  if(key == 17) { isScrollEnabled = false; }
+}
+function zoomCancel2(e){
+  let key = e.which || e.keyCode;
+  if(key == 17) { isScrollEnabled = true; }
+}
+
+
 // SCROLL FUNCTIONS
 function mousePageScroll(e){
   if (isScrollEnabled){
-    if (e.deltaY>0){ nextPage(); }
-    if (e.deltaY<0){ prevPage(); }
+    if (e.deltaY>0  && currentPage < 5){ document.getElementById(`link${ currentPage+1 }`).click(); }
+    if (e.deltaY<0  && currentPage > 1){ document.getElementById(`link${ currentPage-1 }`).click(); }
     supressEventTrigger('wheel');  
   }
 }
-function keypadPageScroll(e){
+function keypadPageScroll(e){ 
   if (isScrollEnabled){
     let key = e.which || e.keyCode;
-    if (key == 40){ nextPage(); }
-    if (key == 38){ prevPage(); }
+    if (key == 40  && currentPage < 5){ document.getElementById(`link${ currentPage+1 }`).click(); }
+    if (key == 38  && currentPage > 1){ document.getElementById(`link${ currentPage-1 }`).click(); }
     supressEventTrigger('keydown');  
   }
 }
 
 
-// NAVIGATION FUNCTIONS
-function nextPage(){
-  if (currentPage < 5){
-    document.getElementById(`link${ currentPage+1 }`).click();
-    document.getElementById(`link${ currentPage }`  ).classList.toggle('selected');
-    document.getElementById(`link${ currentPage+1 }`).classList.toggle('selected');
-    currentPage++;
+// UPDATES CURRENT DISPLAYING PAGE TO JS
+function updateState(page){
+  currentPage = page;
+  let nav = document.getElementById('nav').children;
+  for (let i = 0; i < nav.length; i++){
+    nav[i].classList.remove('selected');
   }
-}
-function prevPage(){
-  if (currentPage > 1){
-    document.getElementById(`link${ currentPage-1 }`).click();
-    document.getElementById(`link${ currentPage }`  ).classList.toggle('selected');
-    document.getElementById(`link${ currentPage-1 }`).classList.toggle('selected');
-    currentPage--;
-  }
+  nav[page-1].classList.add('selected');
 }
 
 
@@ -60,5 +73,4 @@ function closeModal(){
 }
   
 
-// ticTacToeInit(); //DEL
 
