@@ -6,31 +6,32 @@ document.getElementById('link1').click();
 
 
 // SETS EVENT LISTENERS TO THE HMTL
-window.addEventListener('resize', resizeCancel);
-document.getElementsByTagName('html')[0]   .addEventListener('keydown', zoomCancel1);
-document.getElementsByTagName('html')[0]   .addEventListener('keyup',   zoomCancel2);
+window                                     .addEventListener('resize',  resizeScrollCancel);
+document.getElementsByTagName('html')[0]   .addEventListener('keydown', scrollOnZoomCancel1);
+document.getElementsByTagName('html')[0]   .addEventListener('keyup',   scrollOnZoomCancel2);
 document.getElementsByTagName('html')[0]   .addEventListener('wheel',   mousePageScroll);
 document.getElementsByTagName('html')[0]   .addEventListener('keydown', keypadPageScroll);
 document.getElementById('proj-tic-tac-toe').addEventListener('click',   ticTacToeInit);
 
 
 
+
 // PREVENTS PAGE FROM BUGGIN ON RESIZE OR ZOOM
-function resizeCancel(){
+function resizeScrollCancel(){
   document.getElementsByTagName('html')[0].style.scrollBehavior = 'auto';
   document.getElementById(`link${ currentPage }`).click();
   setTimeout(() => { 
     document.getElementsByTagName('html')[0].style.scrollBehavior = 'smooth';
-  }, 200);
+  }, 100);
 }
 
 
 // ZOOM CANCEL FUNCTIONS
-function zoomCancel1(e){
+function scrollOnZoomCancel1(e){console.log('zoom cancel');
   let key = e.which || e.keyCode;
   if(key == 17) { isScrollEnabled = false; }
 }
-function zoomCancel2(e){
+function scrollOnZoomCancel2(e){
   let key = e.which || e.keyCode;
   if(key == 17) { isScrollEnabled = true; }
 }
@@ -38,9 +39,15 @@ function zoomCancel2(e){
 
 // SCROLL FUNCTIONS
 function mousePageScroll(e){
-  if (isScrollEnabled){
-    if (e.deltaY>0  && currentPage < 5){ document.getElementById(`link${ currentPage+1 }`).click(); }
-    if (e.deltaY<0  && currentPage > 1){ document.getElementById(`link${ currentPage-1 }`).click(); }
+  if (isScrollEnabled && document.hasFocus()){
+    if (e.deltaY>0  && currentPage < 5){ 
+      location.href = `#page${ currentPage+1 }`; 
+      updateState(currentPage+1);
+    }
+    if (e.deltaY<0  && currentPage > 1){ 
+      location.href = `#page${ currentPage-1 }`; 
+      updateState(currentPage-1);
+    }
     supressEventTrigger('wheel');  
   }
 }
@@ -68,13 +75,18 @@ function updateState(page){
 // DEALING WITH REPEATED SCROLL REQUESTS LOGIC
 function supressEventTrigger(){
   isScrollEnabled = false;
-  setTimeout(() => { isScrollEnabled = true;}, 300);
+  setTimeout(() => { isScrollEnabled = true;}, 100);
 }
   
 function closeModal(){
   document.getElementById('modal-bg').style.visibility = 'hidden';
   isScrollEnabled = true;
 }
-  
 
+// let x = 0;
 
+// setTimeout(() => {
+//   console.log(x);
+// }, 1000);
+
+// x = 'pudim';
