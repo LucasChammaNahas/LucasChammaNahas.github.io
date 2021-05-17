@@ -118,6 +118,7 @@ header{
   text-underline-offset: 5px;
   text-decoration-thickness: 7px;
   text-decoration-color: transparent;
+  cursor: pointer;
 }
 .nav .selected{
   text-decoration-color: #8D85F1;

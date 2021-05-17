@@ -2,13 +2,14 @@
 // INITIALIZES THE CODE
 let $G = {
   currentPage: 1,
+  dY:0,
+  key:0,
   resizing: false,
-  ctrlPressed: false,
   scrollEnabled: true,
 };
-let currentPage = 1;
-let isScrollEnabled = true;
-document.getElementById('link1').click();
+let t1;
+let t2;
+location.href = '#page1';
 
 
 // SETS EVENT LISTENERS TO THE HMTL
@@ -20,126 +21,95 @@ document.getElementsByTagName('html')[0]   .addEventListener('keydown', keypadPa
 document.getElementById('proj-tic-tac-toe').addEventListener('click',   ticTacToeInit);
 
 
-// currentPage     -> $G.currentPage
-// isScrollEnabled -> $G.ctrlPressed
-// isScrollEnabled -> $G.scrollEnabled
-// .click()        -> location.href
-
-
-
 
 // PREVENTS PAGE FROM BUGGIN ON RESIZE OR ZOOM
 function resizeIssues(){
-  document.getElementById(`link${ currentPage }`).click();
-
-  // document.getElementsByTagName('html')[0].style.scrollBehavior = 'auto';
-  // setTimeout(() => { 
-  //   document.getElementsByTagName('html')[0].style.scrollBehavior = 'smooth';
-  // }, 100);
+  location.href = `#page${ $G.currentPage }`;
+  $G.resizing = true;
+  document.getElementsByTagName('html')[0].style.scrollBehavior = 'auto';
+  setTimeout(() => { 
+    document.getElementsByTagName('html')[0].style.scrollBehavior = 'smooth';
+  }, 100);
 }
 
 
-// ZOOM CANCEL FUNCTIONS
+// DISABLE SCROLL ON ZOOM FUNCTIONS
 function scrollOnZoomCancel1(e){
   let key = e.which || e.keyCode;
-  if(key == 17) { isScrollEnabled = false; } //$G.ctrlPressed
-  x();
+  if(key == 17) { $G.scrollEnabled = false; }
 }
 function scrollOnZoomCancel2(e){
   let key = e.which || e.keyCode;
-  if(key == 17) { isScrollEnabled = true; } //$G.ctrlPressed
+  if(key == 17) { $G.scrollEnabled = true; }
 }
 
 
 // SCROLL FUNCTIONS
 function mousePageScroll(e){
-  if (isScrollEnabled && document.hasFocus()){
-    if (e.deltaY>0  && currentPage < 5){ 
-      location.href = `#page${ currentPage+1 }`; 
-      updateState(currentPage+1);
-    }
-    if (e.deltaY<0  && currentPage > 1){ 
-      location.href = `#page${ currentPage-1 }`; 
-      updateState(currentPage-1);
-    }
-    supressEventTrigger('wheel');  
+  if(e.deltaY > 0  && $G.currentPage < 5){ 
+    $G.dY++;
+    magic();
+  }
+  if(e.deltaY < 0  && $G.currentPage > 1){ 
+    $G.dY--;
+    magic();
   }
 }
 function keypadPageScroll(e){ 
-  if (isScrollEnabled){
-    let key = e.which || e.keyCode;
-    if (key == 40  && currentPage < 5){ document.getElementById(`link${ currentPage+1 }`).click(); }
-    if (key == 38  && currentPage > 1){ document.getElementById(`link${ currentPage-1 }`).click(); }
-    supressEventTrigger('keydown');  
+  let key = e.which || e.keyCode;
+  if (key == 40  && $G.currentPage < 5){ 
+    $G.key =  1;
+    magic();
+  }
+  if (key == 38  && $G.currentPage > 1){ 
+    $G.key = -1;
+    magic();
   }
 }
 
 
 // UPDATES CURRENT DISPLAYING PAGE TO JS
 function updateState(page){
-  currentPage = page;
+  $G.currentPage = page;
   let nav = document.getElementById('nav').children;
   for (let i = 0; i < nav.length; i++){
     nav[i].classList.remove('selected');
   }
   nav[page-1].classList.add('selected');
 }
-
-
-// DEALING WITH REPEATED SCROLL REQUESTS LOGIC
-function supressEventTrigger(){
-  isScrollEnabled = false;
-  setTimeout(() => { isScrollEnabled = true;}, 100);
-}
   
+
+// CLOSE PROJECT MODAL
 function closeModal(){
   document.getElementById('modal-bg').style.visibility = 'hidden';
-  isScrollEnabled = true;
+  $G.scrollEnabled = true;
 }
 
 
+// CONTEM TODA A LOGICA DE ROTAS
+function magic(page){
+  
+  clearInterval(t1);
+  t1 = setTimeout(() => {
 
-
-
-
-
-let t;
-
-function x(){
-
-  /* 
-    INTERVAL
-      hard - smooth - hard
-      location.href
-
-    TRIGGERS
-      resize
-      mouse
-      keyboard
-  */
-
-
-  clearInterval(t);
-  t = setTimeout(() => {
-    console.log('intervalo');
-  }, 1000);
-}
-
-
-/* 
-  FUNCTION
-    mouse
-    resize
-
-  t1
-    tempo de ativacao: maior q escrolao e menor q tirar o dedo pra dois escrolls
-    le o objeto global e compara resize com soma de deltaY
-    se resize:true, return;
-    se resize:false, muda a pagina para o lado da soma de dY e ativa t2
-
-  t2
-    lida com a logica de html smooth
+    if(page != undefined) { $G.currentPage = page; }
     
+    let condition = $G.scrollEnabled && !$G.resizing && ($G.key!=0 && $G.dY==0 || $G.key==0 && $G.dY!=0) || (page!=undefined);
+    if (condition){
+      if($G.key > 0 || $G.dY > 0){ $G.currentPage++; }
+      if($G.key < 0 || $G.dY < 0){ $G.currentPage--; }
+      location.href = `#page${ $G.currentPage }`; 
+      updateState($G.currentPage);
 
+      clearInterval(t2);
+      t2 = setTimeout(() => { 
+        location.href = `#page${ $G.currentPage }`;      
+       }, 600);
+    }
 
-*/
+    $G.dY = 0;
+    $G.key = 0;
+    $G.resizing = false;
+    
+  }, 150);
+}
