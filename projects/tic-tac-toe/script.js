@@ -1,31 +1,20 @@
 
 // Variaveis Globais
-let lastTurn;
+let lastTurn = false;
 
-function ticTacToeInit(){
-  
-  // Injeta HTML no modal
-  document.getElementById('injection-div').innerHTML = ticTacToeHtml;
-
-  // Inicia as Variaveis Globais
-  lastTurn = false;
-  isScrollEnabled = false;
-  
-  
-  // Adiciona Event Listeners
-  let cells = document.getElementById('matrix');
-  for (let i = 0; i < cells.children.length; i++){
-    for (let j = 0; j < cells.children[i].children.length; j++){
-      cells.children[i].children[j].addEventListener('click', _click)
-    }
+// Adiciona Event Listeners
+let cells = document.getElementById('matrix');
+for (let i = 0; i < cells.children.length; i++){
+  for (let j = 0; j < cells.children[i].children.length; j++){
+    cells.children[i].children[j].addEventListener('click', _click)
   }
-  document.getElementById('reset-btn').addEventListener('click', resetGame);
-  document.getElementById('undo-btn') .addEventListener('click', undoTurn);
-  document.getElementById('modal-close-btn') .addEventListener('click', closeModal);
-  
-  // Deixa o modal visivel
-  document.getElementById('modal-bg').style.visibility = 'visible';
 }
+document.getElementById('reset-btn').addEventListener('click', resetGame);
+document.getElementById('undo-btn') .addEventListener('click', undoTurn);
+document.getElementById('modal-close-btn') .addEventListener('click', closeModal);
+
+// Deixa o modal visivel
+document.getElementById('modal-bg').style.visibility = 'visible';
 
 
 function _click(e){

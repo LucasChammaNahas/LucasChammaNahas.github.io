@@ -1,49 +1,46 @@
-
-/*
-  TODO O CSS SOMENTE SERÁ APLICADO
-  AO ELEMENTO #injection-div
-*/
-
-
-
+* {
+  padding: 0;
+  margin: 0;
+}
 :root {
   --gridColor: rgb(200, 200, 200);
   --gridWidth: 10px;
 }
 
-/* Formatacao do div de injecao */
-#injection-div{
+body{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgb(40, 40, 40);
+  height: 100vh;
 }
 
 
 /* Formatacao do titulo */
-#injection-div .playerX{
+.playerX{
   color: rgb(50, 200, 50);
 }
-#injection-div .playerO{
+.playerO{
   color: rgb(178, 95, 255);
 }
-#injection-div  p {
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   font-size: 50px;
-   color: white;
-   margin-bottom: 80px;
- }
-#injection-div span {
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 80px;
+}
+span {
   font-size: 80px;
   font-weight: 900;
 }
 
 
 /* Formatacao da matrix */
-#injection-div #matrix {
+#matrix {
   display: flex;
 }
-#injection-div .cell {
+.cell {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,33 +51,33 @@
   font-size: 500%;
   font-weight: 900;
 }
-#injection-div .cell:hover{
+.cell:hover{
   background-color: #333;
 }
 
 
 /* Linhas do # */
-#injection-div #cell11, #injection-div #cell21{
+#cell11, #cell21{
   border-right:  solid var(--gridColor) var(--gridWidth);
   border-bottom: solid var(--gridColor) var(--gridWidth);  
 }
-#injection-div #cell31{
+#cell31{
   border-right:  solid var(--gridColor) var(--gridWidth);
 }
-#injection-div #cell12, #injection-div #cell22{
+#cell12, #cell22{
   border-bottom: solid var(--gridColor) var(--gridWidth);  
 }
-#injection-div #cell13, #injection-div #cell23{
+#cell13, #cell23{
   border-left:   solid var(--gridColor) var(--gridWidth);
   border-bottom: solid var(--gridColor) var(--gridWidth);  
 }
-#injection-div #cell33{
+#cell33{
   border-left:   solid var(--gridColor) var(--gridWidth);
 }
 
 
 /* Botoes */
-#injection-div button {
+button {
   border: none;
   border-radius: 6px;
   padding: 15px 20px;
@@ -90,7 +87,7 @@
   color: white;
   margin: 70px 40px;
 }
-#injection-div button:active {
+button:active {
   background-color: rgb(253, 77, 112);
 }
 

@@ -18,7 +18,6 @@ document.getElementsByTagName('html')[0]   .addEventListener('keydown', scrollOn
 document.getElementsByTagName('html')[0]   .addEventListener('keyup',   scrollOnZoomCancel2);
 document.getElementsByTagName('html')[0]   .addEventListener('wheel',   mousePageScroll);
 document.getElementsByTagName('html')[0]   .addEventListener('keydown', keypadPageScroll);
-document.getElementById('proj-tic-tac-toe').addEventListener('click',   ticTacToeInit);
 
 
 
