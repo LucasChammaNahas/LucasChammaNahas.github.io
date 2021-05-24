@@ -5,7 +5,6 @@
   padding: 0;
   color: white;
   text-decoration: none;
-  /* border: cadetblue solid 2px; */
 }
 html {
   scroll-behavior: smooth;
@@ -17,62 +16,18 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* position: relative; */
 }
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
 }
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 /* INITIAL ***********************************************/
-
-
-
-
-
-
-
-
-
-
-/* MODAL *************************************************/
-  /* #modal-bg {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.4);
-    visibility: hidden;
-  }
-  #modal {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    max-width: 800px;
-    height: 90vh;
-    background-color: rgb(40, 40, 40);
-    border-radius: 25px;
-  }
-  #modal #modal-close-btn{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    height: 80px;
-    width: 80px;
-    border-radius: 10%;
-    background-color: rgb(70, 70, 70);
-    border-width: 0;
-    font-size: 40px;
-    margin: 0;
-  }
-  #modal #modal-close-btn:active{
-    background-color: rgb(90, 90, 90);
-  } */
-/* MODAL *************************************************/
 
 
 
@@ -89,7 +44,6 @@ header{
   justify-content: space-between;
   height: 150px;
   width: 100%;
-  /* border: solid 3px gray; */
 }
 .logo{
   display: flex;
@@ -124,7 +78,6 @@ header{
   text-decoration-color: #8D85F1;
   transition: text-decoration-color 0.5s;
 }
-
 /* HEADER ************************************************/
 
 
@@ -136,50 +89,36 @@ header{
 
 
 /* PAGE 1 ************************************************/
-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-/* PAGE 1 ************************************************/
-
-
-
-
-
-
-
-
-
-/* PAGE 1 ************************************************/
-#page1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 #page1 .div-central{
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Krona One', sans-serif;
-  /* font-family: 'Ubuntu', sans-serif; */
-  /* font-size: 50px; */
-  font-size: 35px;
+  /* width: 530px; */
+  /* border: solid 3px gray; */
 }
-#page1 .div-central img{
-  height: 300px;
-  width: auto;
-  padding: 180px 0 0 11%;
+#page1 img{
+  width: 50%;
+  padding: 10% 0 0 10%;
   /* border: solid 3px yellow; */
 }
-#page1 .div-central .p1{
+#page1 .p1, #page1 .p2{
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+  font-size: 35px;  
+  /* border: solid 3px yellow; */
+}
+#page1 .p1{
   color: #8D85F1;
   padding: 30px 0;
 }
-#page1 .div-central .p2{
+#page1 .p2{
   color: #D3AE76;
+}
+
+@media only screen and (max-width: 600px) {
+  #page1 .p1, #page1 .p2{
+    font-size: 5vw;  
+  }
 }
 /* PAGE 1 ************************************************/
 
