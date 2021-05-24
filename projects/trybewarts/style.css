@@ -1,0 +1,369 @@
+
+
+
+/* INITIAL *************************************/
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Roboto&display=swap');
+/* 
+  roboto 400 e 700
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+input, select {
+  padding: 7px 10px;
+  border: 2px solid #999;
+  border-radius: 7px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: white;
+}
+button {
+  border-radius: 7px;  
+  border: 0;
+  padding: 7px 10px;
+  font-size: 18px;
+  /* font-weight: 700; */
+}
+/* INITIAL *************************************/
+
+
+
+
+
+
+
+
+
+/* HEADER **************************************/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100px;
+  width: 100%;
+  background-color: limegreen;
+}
+header > img {
+  height: 80px;
+}
+header > h1 {
+  display: flex;
+  font-size: 40px;
+  font-family: 'Mountains of Christmas', cursive;
+  /* border: solid 2px red; */
+}
+header > form {
+  display: flex;
+}
+header input {
+  margin-right: 15px;
+}
+header button {
+  color: white;
+  background-color: deeppink;
+}
+header button:active {
+  background-color: rgb(255, 100, 180);
+}
+/* HEADER **************************************/
+
+
+
+
+
+
+
+
+
+/* MAIN ****************************************/
+main {
+  display: flex;
+  width: 1200px;
+}
+main > div {
+}
+main > div:nth-child(1) {
+  width: 60%;
+}
+main > div:nth-child(2) {
+  width: 40%;
+}
+/* MAIN ****************************************/
+
+
+
+
+
+
+
+
+
+/* FORM ****************************************/
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: solid 2px #333;
+}
+/* FORM ****************************************/
+
+
+
+
+
+
+
+
+
+/* FORM SEC 1 **********************************/
+section:nth-child(1) {
+  align-items: stretch;
+}
+section:nth-child(1) > div {
+  display: flex;
+  justify-content: space-between;
+  /* border: solid 3px red; */
+}
+
+section:nth-child(1) > div:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+section:nth-child(1) input, 
+section:nth-child(1) select {
+  width: 48%;
+}
+/* FORM SEC 1 **********************************/
+
+
+
+
+
+
+
+
+
+/* FORM SEC 2 **********************************/
+section:nth-child(2) > div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+}
+/* FORM SEC 2 **********************************/
+
+
+
+
+
+
+
+
+
+/* FORM SEC 3 **********************************/
+/* main > div > section:nth-child(3) {} */
+/* FORM SEC 3 **********************************/
+
+/* FORM SEC 4 **********************************/
+/* main > div > section:nth-child(4) {} */
+/* FORM SEC 4 **********************************/
+
+/* FORM SEC 5 **********************************/
+/* main > div > section:nth-child(5) {} */
+/* FORM SEC 5 **********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.green-bg {
+  background-color: rgb(50, 167, 145);
+  padding: 0 10%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(50, 167, 145);
+  height: 80px;
+  padding: 0 0%;
+}
+
+.header img {
+  height: 80%;
+}
+
+.header form {
+  display: flex;
+}
+
+input , select , textarea {
+  padding: 10px;
+  margin-right: 7px;
+  border-radius: 7px;
+  border: solid 2px rgb(61, 61, 61);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: purple;
+  color: white;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+#evaluation-form {
+  width: 675px;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.form-top > * {
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+#evaluation-form > * {
+  padding: 15px 10%;
+  border-bottom: solid 2px gray;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+  padding: 100px 0;
+}
+
+#main {
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.form-top {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-top > select {
+  width: 44.5%;
+}
+
+.family-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+#section-family {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 23%;
+}
+
+.section-learning-content > label {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.radio-section label {
+  margin-left: -10px;
+  margin-right: 22px;
+}
+
+#section-family > label {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.section-learning-content {
+  width: 50%;
+}
+
+#label-rate {
+  text-align: center;
+  width: 100%;
+}
+
+#text-area {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+}
+
+#text-area > textarea {
+  width: 100%;
+  text-decoration: none;
+  resize: none;
+}
+
+#agree-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#agreement {
+  margin: 15px;
+}
+
+#submit {
+  display: flex;
+  flex-flow: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5%;
+  border: none;
+}
+
+#submit-btn {
+  width: 80%;
+  margin: auto;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(50, 167, 145);
+  height: 80px;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 800;
+} */
