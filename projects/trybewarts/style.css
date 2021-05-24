@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   height: 100vh;
 }
-input, select {
+input, select, textarea {
   padding: 7px 10px;
   border: 2px solid #999;
   border-radius: 7px;
@@ -30,9 +30,15 @@ input, select {
 button {
   border-radius: 7px;  
   border: 0;
-  padding: 7px 10px;
+  padding: 15px 30px;
   font-size: 18px;
-  /* font-weight: 700; */
+  font-weight: 700;
+}
+h2 {
+  font-size: 20px;
+}
+label {
+  font-size: 16px;
 }
 /* INITIAL *************************************/
 
@@ -60,7 +66,6 @@ header > h1 {
   display: flex;
   font-size: 40px;
   font-family: 'Mountains of Christmas', cursive;
-  /* border: solid 2px red; */
 }
 header > form {
   display: flex;
@@ -88,9 +93,7 @@ header button:active {
 /* MAIN ****************************************/
 main {
   display: flex;
-  width: 1200px;
-}
-main > div {
+  width: 1000px;
 }
 main > div:nth-child(1) {
   width: 60%;
@@ -113,8 +116,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px 0;
-  border-bottom: solid 2px #333;
+  padding: 50px 0;
+  border-bottom: solid 2px #ccc;
 }
 /* FORM ****************************************/
 
@@ -133,13 +136,10 @@ section:nth-child(1) {
 section:nth-child(1) > div {
   display: flex;
   justify-content: space-between;
-  /* border: solid 3px red; */
 }
-
 section:nth-child(1) > div:nth-child(1) {
   margin-bottom: 20px;
 }
-
 section:nth-child(1) input, 
 section:nth-child(1) select {
   width: 48%;
@@ -172,21 +172,73 @@ section:nth-child(2) > div {
 
 
 /* FORM SEC 3 **********************************/
-/* main > div > section:nth-child(3) {} */
+section:nth-child(3) > div{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+}
+section:nth-child(3) > div > div{
+  width: 130px;
+}
 /* FORM SEC 3 **********************************/
 
+
+
+
+
+
+
+
+
 /* FORM SEC 4 **********************************/
-/* main > div > section:nth-child(4) {} */
+section:nth-child(4) > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+section:nth-child(4) > div > label {
+  margin-left: -35px;
+}
 /* FORM SEC 4 **********************************/
+
+
+
+
+
+
+
 
 /* FORM SEC 5 **********************************/
-/* main > div > section:nth-child(5) {} */
+section:nth-child(5) > textarea {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  margin: 20px 0;
+  resize: none;
+}
 /* FORM SEC 5 **********************************/
 
 
 
 
 
+
+
+
+
+/* FORM SEC 6 **********************************/
+section:nth-child(6) > button {
+  width: 80%;
+  color: white;
+  background-color: deeppink;
+}
+section:nth-child(6) > button:active {
+  background-color: rgb(255, 100, 180);
+}
+/* FORM SEC 6 **********************************/
 
 
 
