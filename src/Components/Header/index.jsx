@@ -1,13 +1,23 @@
 import { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import './styles.css';
 import logo from '../../Images/logo.png';
 
 export default function Header() {
 
   const [pageIndex, setPageIndex] = useState(0);
+  let history = useHistory();
+  const pagesNames = [
+    'welcome',
+    'about-me',
+    'projects',
+    'skills',
+    'contact',
+  ]
 
   const handleClick = (id) => {
     setPageIndex(id);
+    history.push("/home");
   };
 
   return (
