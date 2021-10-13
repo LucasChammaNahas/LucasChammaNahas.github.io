@@ -1,6 +1,7 @@
 import './styles.css';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from '../Components/Header';
-import LandingPage from '../Pages/1_landingPage';
+import WelcomePage from '../Pages/1_welcomePage';
 import AboutMe from '../Pages/2_aboutMe';
 import Projects from '../Pages/3_projects';
 import Tools from '../Pages/4_tools';
@@ -10,12 +11,15 @@ export default function App() {
   return (
     <div className="master-container">
       <Header />
-      <LandingPage />
-      <AboutMe />
-      <Projects />
-      <Tools />
-      <Contact />
-      <p>body</p>
+      <Switch>
+        <Route exact path="/welcome" component={ WelcomePage } />
+        <Route exact path="/about-me" component={ AboutMe } />
+        <Route exact path="/projects" component={ Projects } />
+        <Route exact path="/tools" component={ Tools } />
+        <Route exact path="/contact" component={ Contact } />
+        <Route exact path="/"><Redirect to="/welcome" /></Route>
+        <Route><Redirect to="/welcome" /></Route>
+      </Switch>
     </div>
   );
 }
