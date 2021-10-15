@@ -4,7 +4,6 @@ import { HashRouter as BrowserRouter } from 'react-router-dom';
 import { Provider } from './Provider';
 import App from './App';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider>

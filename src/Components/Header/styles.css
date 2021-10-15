@@ -1,9 +1,11 @@
 header {
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
-  height: 150px;
+  height: 100px;
   width: 100%;
+  padding: 0 5%;
 }
 
 header .logo {
@@ -12,11 +14,11 @@ header .logo {
   align-items: center;  
 }
 
-header .logo img {
+/* header .logo img {
   padding: 0 30px;
   height: 100px;
   width: auto;
-}
+} */
 
 header .logo p {
   font-family: 'Krona One', sans-serif;
@@ -26,24 +28,24 @@ header .logo p {
 header .nav {
   display: flex;
   align-items: center;
-  padding-right: 8vw;
+  /* border: solid red 4px; */
 }
 
 header .nav button {
-  padding: 0 1.5vw;
   border: none;
   background: none;
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 20px;
+  font-family: 'Teko', sans-serif;
+  font-size: 30px;
   text-decoration: underline;
   text-underline-offset: 5px;
   text-decoration-thickness: 7px;
   text-decoration-color: transparent;
   cursor: pointer;
   color: white;
+  padding: 0 1vw;
 }
 
 header .nav .selected {
-  text-decoration-color: #8D85F1;
+  text-decoration-color: var(--main);
   transition: text-decoration-color 0.5s;
 }

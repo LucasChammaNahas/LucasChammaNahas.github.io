@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from "react-router-dom";
+// import logo from '../../Images/logo.png';
 import './styles.css';
-import logo from '../../Images/logo.png';
 
 export default function Header() {
 
@@ -24,8 +24,8 @@ export default function Header() {
     <header>
 
       <div className="logo">
-        <img src={ logo } alt="Logo" />
-        <p>.LCN</p>
+        {/* <img src={ logo } alt="Logo" /> */}
+        <p>{ '{ LCN }' }</p>
       </div>
 
       <nav id="nav" className="nav">
