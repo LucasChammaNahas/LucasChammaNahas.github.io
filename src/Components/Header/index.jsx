@@ -7,17 +7,17 @@ export default function Header() {
 
   const [pageIndex, setPageIndex] = useState(0);
   let history = useHistory();
-  const pagesNames = [
-    'welcome',
-    'about-me',
-    'projects',
-    'skills',
-    'contact',
+  const indexToName = [
+    '/home',
+    '/about-me',
+    '/projects',
+    '/skills',
+    '/contact',
   ]
 
   const handleClick = (id) => {
     setPageIndex(id);
-    history.push("/home");
+    history.push(indexToName[id]);
   };
 
   return (

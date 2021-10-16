@@ -1,7 +1,7 @@
 import programmer from '../../Images/programmer.png'
 import './styles.css';
 
-export default function WelcomePage() {
+export default function HomePage() {
   return (
     <div className="welcome-div">
       <img src={ programmer } alt="programmer" />
