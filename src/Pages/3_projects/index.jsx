@@ -3,8 +3,11 @@ import './styles.css';
 
 export default function ProjectsPage() {
   return (
-    <div>
+    <div className="projects-div">
+      <ProjectCard project="recipes" />
       <ProjectCard project="starwars" />
+      <ProjectCard project="trivia" />
+      <ProjectCard project="ticTacToe" />
     </div>
   );
 };
