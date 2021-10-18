@@ -1,30 +1,26 @@
-import { useState } from 'react';
 import { useHistory } from "react-router-dom";
-// import logo from '../../Images/logo.png';
+import { useGlobalState } from '../../Provider';
 import './styles.css';
 
 export default function Header() {
-
-  const [pageIndex, setPageIndex] = useState(0);
   let history = useHistory();
-  const indexToName = [
+  const { pageIndex } = useGlobalState();
+  const routesArr = [
     '/home',
     '/about-me',
     '/projects',
     '/skills',
     '/contact',
-  ]
+  ];
 
   const handleClick = (id) => {
-    setPageIndex(id);
-    history.push(indexToName[id]);
+    history.push(routesArr[id]);
   };
 
   return (
     <header>
 
       <div className="logo">
-        {/* <img src={ logo } alt="Logo" /> */}
         <p>{ '{ LCN }' }</p>
       </div>
 

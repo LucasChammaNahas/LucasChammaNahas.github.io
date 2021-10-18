@@ -6,21 +6,30 @@
   background-color: #222;
   border: solid #333 8px;
   border-radius: 20px;
-  height: 350px;
-  width: 300px;
+  height: 30vh;
+  width: 30vh;
   cursor: pointer;
+  margin: 30px;
+}
+
+.project-card-on-hover {
+  border: solid 8px var(--sec);
 }
 
 .project-card-div img {
-  height: 200px;
-  width: 200px;
-  margin-top: 40px;
+  height: 17vh;
+  width: 17vh;
+  margin-top: 3vh;
 }
 
 .project-card-div p {
   font-family: 'Quantico', sans-serif;
   text-align: center;
   color: var(--main);
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 3.5vh;
+  margin-bottom: 1vh;
+}
+
+.project-card-on-hover p {
+  color: var(--sec);
 }

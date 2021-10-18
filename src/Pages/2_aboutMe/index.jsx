@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
+import { useGlobalState } from '../../Provider';
 import profile from '../../Images/profile.png';
 import './styles.css';
 
 export default function AboutMePage() {
+  const { setPageIndex } = useGlobalState();
+  useEffect(() => {
+    setPageIndex(1);
+  });
+
   return (
-    <div className="about-me-div">
+    <div className="about-me-div fade-in">
       <div>
         <p>
           Web Development and Computer Science

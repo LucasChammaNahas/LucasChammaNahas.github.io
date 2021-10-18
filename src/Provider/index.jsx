@@ -6,7 +6,6 @@ const AppContext = createContext();
 // Criação do Provider
 const Provider = ({ children }) => {
   const [pageIndex, setPageIndex] = useState(null);
-
   return (
     <AppContext.Provider value={ { pageIndex, setPageIndex } }>
       {children}
