@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.a617e044.chunk.css",
-    "main.js": "/static/js/main.e36c16a1.chunk.js",
-    "main.js.map": "/static/js/main.e36c16a1.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c7ed1d12.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c7ed1d12.js.map",
-    "static/js/2.3fe9d014.chunk.js": "/static/js/2.3fe9d014.chunk.js",
-    "static/js/2.3fe9d014.chunk.js.map": "/static/js/2.3fe9d014.chunk.js.map",
-    "static/js/3.29200bc3.chunk.js": "/static/js/3.29200bc3.chunk.js",
-    "static/js/3.29200bc3.chunk.js.map": "/static/js/3.29200bc3.chunk.js.map",
+    "main.css": "/static/css/main.068af4aa.chunk.css",
+    "main.js": "/static/js/main.6b29d655.chunk.js",
+    "main.js.map": "/static/js/main.6b29d655.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f027f2bf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f027f2bf.js.map",
+    "static/js/2.3ac1b3ba.chunk.js": "/static/js/2.3ac1b3ba.chunk.js",
+    "static/js/2.3ac1b3ba.chunk.js.map": "/static/js/2.3ac1b3ba.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.3fe9d014.chunk.js.LICENSE.txt": "/static/js/2.3fe9d014.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
+    "static/css/main.068af4aa.chunk.css.map": "/static/css/main.068af4aa.chunk.css.map",
+    "static/js/2.3ac1b3ba.chunk.js.LICENSE.txt": "/static/js/2.3ac1b3ba.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/static/media/background.37c45d1a.jpg",
+    "static/media/profile.9f58d653.png": "/static/media/profile.9f58d653.png",
+    "static/media/programmer.d71aa01b.png": "/static/media/programmer.d71aa01b.png",
+    "static/media/recipes.df44475e.png": "/static/media/recipes.df44475e.png",
+    "static/media/starwars.e37b4355.png": "/static/media/starwars.e37b4355.png",
+    "static/media/ticTacToe.7c852461.png": "/static/media/ticTacToe.7c852461.png",
+    "static/media/trivia.80e76db8.png": "/static/media/trivia.80e76db8.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c7ed1d12.js",
-    "static/js/2.3fe9d014.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.e36c16a1.chunk.js"
+    "static/js/runtime-main.f027f2bf.js",
+    "static/js/2.3ac1b3ba.chunk.js",
+    "static/css/main.068af4aa.chunk.css",
+    "static/js/main.6b29d655.chunk.js"
   ]
 }
