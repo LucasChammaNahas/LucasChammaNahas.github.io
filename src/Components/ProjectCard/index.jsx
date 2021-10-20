@@ -19,22 +19,38 @@ export default function ProjectCard({ project }) {
 
   const textObj = {
     recipes:   'Recipes App',
-    starwars:  'Planet Finder',
+    starwars:  'Planet Search',
     trivia:    'Trivia Game',
     ticTacToe: 'Tic Tac Toe',
   };
 
+  const linkObj = {
+    recipes:   'Recipes-App',
+    starwars:  'Starwars-Planet-Search',
+    trivia:    'Trivia-Game',
+    ticTacToe: 'Tic-Tac-Toe',
+  };
+
+
   const img  = imgObj[project];
   const text = textObj[project];
+  const link = linkObj[project];
 
   return (
-    <div 
+    <a 
       className={`project-card-div ${isHovering ? 'project-card-on-hover' : ''}`} 
+      href={ `https://lucaschammanahas.github.io/${link}/` }
+      target="_blank"
+      rel="noreferrer"
       onMouseEnter={ () => setIsHovering(true) }
       onMouseLeave={ () => setIsHovering(false) }
     >
       <img src={ img } alt={ project } />
       <p>{ text }</p>
-    </div>
+    </a>
   );
 };
+
+
+
+

@@ -9,7 +9,6 @@ import Skills from '../Pages/4_skills';
 import Contact from '../Pages/5_contact';
 
 export default function App() {
-
   let ScrollTimeout;
   let history = useHistory();
   const routesArr = [
